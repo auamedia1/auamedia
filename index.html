@@ -36,7 +36,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand" href="index.html">
-            <span>
+            <img src="images/auamedialogo-transformed.png" alt="AUA Media Logo" style="height: 40px; margin-right: 10px;"> <span>
               AUA Media
             </span>
           </a>
@@ -67,8 +67,9 @@
                 <a href="">
                   <img src="images/user.png" alt="">
                 </a>
-                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0" id="searchForm">
+                  <input type="text" placeholder="Search..." name="searchQuery" id="searchInput">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit" aria-label="Search"></button>
                 </form>
               </div>
             </div>
@@ -279,7 +280,6 @@
 
   <!-- end who section -->
 
-
   <!-- work section -->
   <section class="work_section layout_padding">
     <div class="container">
@@ -438,7 +438,6 @@
 
   <!-- end target section -->
 
-
   <!-- contact section -->
 
   <section class="contact_section layout_padding">
@@ -484,9 +483,7 @@
     </div>
   </section>
 
-
   <!-- end contact section -->
-
 
   <!-- info section -->
   <section class="info_section ">
@@ -613,11 +610,10 @@
 
   <!-- end info_section -->
 
-
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2020 All Rights Reserved By
+      © 2020 All Rights Reserved By
       <a href="https://html.design/">Free Html Templates</a>
     </p>
   </section>
@@ -645,6 +641,14 @@
           items: 3
         }
       }
+    });
+
+    // Functionality for the search button
+    document.getElementById('searchForm').addEventListener('submit', function(event){
+        event.preventDefault(); // Prevent default form submission
+        var searchQuery = document.getElementById('searchInput').value;
+        alert("Search functionality not fully implemented yet. Searching for: " + searchQuery);
+        // Here you would usually perform a search action
     });
   </script>
   <!-- end owl carousel script -->
