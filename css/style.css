@@ -26,6 +26,8 @@ nav ul {
   background-color: #000000;
   border-top: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
+  height: 60px; /* Increased thickness */
+  align-items: center; /* Center links vertically */
 }
 
 nav ul li {
@@ -97,25 +99,11 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-/* Portfolio Section */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.gallery img {
+.card img {
   width: 100%;
   height: auto;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  border-color: #ffcc00;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 /* Contact Section */
